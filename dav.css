@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+    padding-left: 20px;
+    font-weight: bold;  
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+section{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+    background-image: url('./Screenshot_20231116-001611.jpg');
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    position: relative;
+    top: 6vh;
+    background-size: cover;
+
+}
+
+section h1{
+
+    top: 20vh;
+    left: 30vh;
+    color: #14e09c;
+    position: absolute;
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+section .type-container{
+    display: inline-block;
+    overflow-x: wrap;
+    width: 30%;
+    
+}
+
+section .typed-text{
+    
+    overflow: hidden;
+    width: 0;
+    border-right: 1px solid yellow;
+    font-size: 30px;
+    white-space: nowrap;
+    animation: type 13s forwards  ease-in;
+    
+    font-weight: bold;
+
+}
+
+
+article{
+    display: flex;
+    width: 100%;
+    margin-top: 10vh;
+}
+
+#section1{
+
+}
+
+#section2{
+   
+}
+.first-side{
+    width:60%;
+    ;
+}
+
+.second-side{
+    width: 40%;
+}
+#switching-header{
+    animation: changingColors 60s infinite ease-in-out;
+}
+
+#switching-header span{
+    animation: changingColors 60s infinite ease-in-out reverse
+}
+
+
+.red{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+@keyframes type {
+    from{width:0}
+    to{width: 100%}
+}
+
+
+
+.container{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.second-container{
+    margin-left: 3%;
+    margin-right: 1%;
+
+}
+
+.comment-field{
+    height: 30vh;
+    width: 60vh;
+    text-align: start;
+    border: 1px solid #ccc;
+}
+
+
+.comments-div{
+    background:#ccc;
+    padding: 6px 10px;
+    height: 30vh;
+    margin-top: 5vh;
+    border-radius: 5% 3px 40% 50px;
+
+}
+.commenters-name{
+    border-bottom: 1px solid green;
+    display: flex;
+    flex-direction: column;
+}
+
+.commenters-name span{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    font-weight: 500;
+}
+
+.contacts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
+}
+.contacts form{
+
+display: flex;
+justify-content:left;
+margin-right: 25vh;
+flex-direction: column;
+
+}
+
+.typed-out{
+    overflow: hidden;
+    border-right: .15rem solid red;
+    font-size: 1.6rem;
+    width:0;
+    
+    animation: typing 8s 3s forwards steps(20, end) ,
+                blinking .8s infinite;   
+}
+
+.type-container{
+    display: inline-block;
+} 
+
+.main-page-type-container{
+    margin-top: 20vh;
+}
+
+.dropdown-box{
+    background: #c5e610;
+    width: 50vh;
+    padding: 20px 22px;
+    position: absolute;
+    left: 70vh;
+    border-radius: 20PC 20vh;
+    animation: changingBackground 60s  5s ease infinite;
+    display: none;
+
+}
+
+.dropdownheader{
+    padding-bottom: 2px;
+   
+}
+
+.dropdown-box .dropdown-body .dropdown-action
+button{
+  background-color: #c5e610;
+    border-style: hidden;
+    font-size: 35px;
+    font-weight: bold;
+    color:#0a1afa;
+    margin-left: 12px;
+    animation: changingBackground 60s  5s ease infinite;
+}
+.dropdownheader h1{
+    font-weight: 600;
+
+}
+
+.testimonies-imges{
+    height: 50vh;
+    width: 40vh;
+}
+
+
+.testimonies-div{
+    margin-top: 20vh;
+}
+footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    background-color:  #14e09c;
+    padding: 6px 10px;
+    margin-top: 20vh;
+}
+
+
+@keyframes typing {
+    from{width: 0}
+    to{
+    width: 100%
+    }
+}
+
+@keyframes blinking {
+    from{border-color:red}
+    to{border-color : transparent}
+}
+
+@keyframes changingColors{
+    10%{color:#166d6d}
+    20%{color:#1adf13}
+    30%{color:#480883}
+    40%{color:#d119e2}
+    50%{color:#eedf0d}
+    60%{color:#d32332}
+    70%{color:#c5e610}
+    80%{color:#acdbaca8}
+    90%{color:#07055e}
+    100%{color:#ee8915d2}
+    }
+
+    @keyframes changingBackground{
+        10%{background-color:#166d6d}
+        20%{background-color:#1adf13}
+        30%{background-color:#480883}
+        40%{background-color:#d119e2}
+        50%{background-color:#eedf0d}
+        60%{background-color:#d32332}
+        70%{background-color:#c5e610}
+        80%{background-color:#acdbaca8}
+        90%{background-color:#07055e}
+        100%{background-color:#ee8915d2}
+        }

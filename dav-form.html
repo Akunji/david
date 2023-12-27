@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./dav.css">
+    <title>Document</title>
+    <style>
+.typed-out{
+    overflow: hidden;
+    border-right: .15rem solid red;
+    font-size: 1.6rem;
+    width:0;
+    height: 30px;
+    animation: typing 4s forwards steps(20, end),
+                blinking .8s infinite;   
+}
+
+.type-container{
+    display: inline-block;
+} 
+
+@keyframes typing {
+    from{width: 0}
+    to{
+    width: 100%
+    }
+}
+
+@keyframes blinking {
+    from{border-color:red}
+    to{border-color : transparent}
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href = "./dav.html">Home</a>
+        </nav>
+        <h1 class="color-header">Fill Davids Form </h1>
+        <p>Lets see what you know</p>
+       <div class="form-container">
+        <label for="name">You Name:</label>
+       <input type="text" id="name" class="name">
+       <br>
+
+       <label for="name">You Mail:</label>
+       <input type="email" id="email" class="email">
+       <br>
+
+       <label for="name">You Num:</label>
+       <input type="number" id="num" class="phone">
+
+       <br>
+       <label for="name">Where did you know David:</label>
+      <div class="dropdown">
+        <button class="btn dropdown-toggle">where?
+            <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-menu"> 
+            <li role="presentation"> 
+                <input type = "radio" name="jos" value="jos">
+                    <input type = "radio" name="jos" value="jos">
+                        <input type = "radio" name="jos" value="jos">
+            </li>
+        </ul>
+
+  </div>
+<div class="type-container">
+<div class="typed-out">
+    i can sense tention in your head
+</div>
+</div>
+    </table>
+    <script src="./dav.js"></script>
+    <script src="./js/src/popover.js"></script>
+</body>
+</html>
