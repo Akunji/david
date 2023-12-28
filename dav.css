@@ -30,7 +30,7 @@ section{
     justify-content: left;
     align-items: center;
     margin-top: 20px;
-    background-image: url('./Screenshot_20231116-001611.jpg');
+    background-image: url('./images/Screenshot_20231116-001611.jpg');
     width: 100%;
     height: 80vh;
     background-repeat: no-repeat;
@@ -177,7 +177,7 @@ flex-direction: column;
     font-size: 1.6rem;
     width:0;
     
-    animation: typing 8s 3s forwards steps(20, end) ,
+    animation: typing 8s 3s backwards steps(20, end) infinite,
                 blinking .8s infinite;   
 }
 
@@ -195,9 +195,13 @@ flex-direction: column;
     padding: 20px 22px;
     position: absolute;
     left: 70vh;
-    border-radius: 20PC 20vh;
+    border-radius: h 12px 1rem;
     animation: changingBackground 60s  5s ease infinite;
-    display: none;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -216,8 +220,14 @@ button{
     margin-left: 12px;
     animation: changingBackground 60s  5s ease infinite;
 }
+
+.dropdownheader{
+    margin-bottom: -50px;
+}
 .dropdownheader h1{
     font-weight: 600;
+    animation: changingColors 2s infinite,
+    bounceHeader 3s ease;
 
 }
 
@@ -278,4 +288,25 @@ footer{
         80%{background-color:#acdbaca8}
         90%{background-color:#07055e}
         100%{background-color:#ee8915d2}
+        }
+
+        @keyframes bounceHeader {
+            10%{
+                transform: translateY(0px);
+            }
+
+            50%{
+                transform: translateY(25px);
+            }
+
+            75%{
+                transform: translateY(-15px);
+            }
+            90%{
+                transform: translateY(10px);
+            }
+
+            100%{
+                transform: translateY(0px);
+            }
         }
